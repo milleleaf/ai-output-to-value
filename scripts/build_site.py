@@ -15,8 +15,8 @@ from publication_data import load_yaml, source_map
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
-REPO_URL = os.environ.get("PUBLICATION_REPO_URL", "https://github.com/AlreadyOpen/ai-output-to-value")
-UMBRELLA_URL = os.environ.get("PUBLICATION_UMBRELLA_URL", "https://github.com/AlreadyOpen")
+REPO_URL = os.environ.get("PUBLICATION_REPO_URL", "https://github.com/milleleaf/ai-output-to-value")
+UMBRELLA_URL = os.environ.get("PUBLICATION_UMBRELLA_URL", "https://github.com/milleleaf")
 SOURCE_REF = os.environ.get("PUBLICATION_SOURCE_REF") or os.environ.get("GITHUB_SHA") or "main"
 PUBLICATION_MODE = os.environ.get("PUBLICATION_MODE", "preview").strip().lower()
 RELEASE_SCOPES = {"guide", "policy"}

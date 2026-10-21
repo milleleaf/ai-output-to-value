@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 
 import { evaluateClaim as evaluateWithSchema, getStopRule } from "./gate-core.mjs";
 
-export const DEFAULT_PUBLICATION_URL = "https://alreadyopen.github.io/ai-output-to-value/";
+export const DEFAULT_PUBLICATION_URL = "https://milleleaf.github.io/ai-output-to-value/";
 
 const bundledClaimSchema = JSON.parse(
   readFileSync(new URL("../schemas/v1/claim.schema.json", import.meta.url), "utf8")

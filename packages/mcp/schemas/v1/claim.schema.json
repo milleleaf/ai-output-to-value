@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://alreadyopen.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
+  "$id": "https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
   "title": "AI Output to Value claim record",
   "description": "Machine-readable decision record for the AI Output to Value stop-rule framework. The producer identity does not determine the gate; the target decision does. Workflow fields describe the end-to-end process boundary and do not create a seventh claim level.",
   "type": "object",

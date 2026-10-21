@@ -79,7 +79,7 @@ jobs:
       - name: Build selected publication
         env:
           PUBLICATION_REPO_URL: https://github.com/${{ github.repository }}
-          PUBLICATION_UMBRELLA_URL: https://github.com/AlreadyOpen
+          PUBLICATION_UMBRELLA_URL: https://github.com/milleleaf
           PUBLICATION_SOURCE_REF: ${{ github.sha }}
         run: python scripts/build_with_ui.py
 

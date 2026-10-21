@@ -170,7 +170,7 @@
       "name": "$schema that is a URI passes",
       "expectedStatus": "PASS",
       "patch": {
-        "$schema": "https://alreadyopen.github.io/ai-output-to-value/schemas/v1/claim.schema.json"
+        "$schema": "https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json"
       }
     },
     {

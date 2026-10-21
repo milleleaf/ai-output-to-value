@@ -4,9 +4,9 @@
 
 > **Access is not capability. Output is not completion. Apparent completeness is not proof of substance. Activity is not business value.**
 
-**Live working preview:** https://alreadyopen.github.io/ai-output-to-value/
+**Live working preview:** https://milleleaf.github.io/ai-output-to-value/
 
-**Organisation:** [AlreadyOpen](https://github.com/AlreadyOpen) · **Repository:** [AlreadyOpen/ai-output-to-value](https://github.com/AlreadyOpen/ai-output-to-value)
+**Organisation:** [AlreadyOpen](https://github.com/milleleaf) · **Repository:** [AlreadyOpen/ai-output-to-value](https://github.com/milleleaf/ai-output-to-value)
 
 ## Start here
 
@@ -15,7 +15,7 @@ For a first-time business reader or review meeting, use the human kit first:
 1. **[Run the 15-minute decision discussion](START-HERE.md#run-the-15-minute-decision-discussion)** — decision → eight questions.
 2. **[Open / print the Claim Card](content/claim-card.md)** or **[one-page meeting brief](content/meeting-brief.md)**.
 3. **Inspect the evidence** needed for the next decision.
-4. **[Use the interactive Claim Gate](https://alreadyopen.github.io/ai-output-to-value/tools/claim-gate.html)** when a structured record or handoff is useful.
+4. **[Use the interactive Claim Gate](https://milleleaf.github.io/ai-output-to-value/tools/claim-gate.html)** when a structured record or handoff is useful.
 5. **Export/import `claim.json`** only when portability across browser, CLI, CI, MCP, WebMCP, or another tool adds value.
 
 No schema, MCP/WebMCP, or JSON knowledge is required to begin. Filled teaching records and worked decisions remain available under **[samples](toolkit/samples/README.md)** and **[worked decisions](content/worked-cases.md)**.

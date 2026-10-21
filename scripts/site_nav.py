@@ -15,7 +15,7 @@ from __future__ import annotations
 import os
 import re
 
-REPO_URL = os.environ.get("PUBLICATION_REPO_URL", "https://github.com/AlreadyOpen/ai-output-to-value")
+REPO_URL = os.environ.get("PUBLICATION_REPO_URL", "https://github.com/milleleaf/ai-output-to-value")
 MCP_URL = f"{REPO_URL}/tree/main/packages/mcp"
 
 # (label, path relative to the site root, or an absolute URL)
