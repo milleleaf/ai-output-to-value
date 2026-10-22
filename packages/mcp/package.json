@@ -1,5 +1,5 @@
 {
-  "name": "@alreadyopen/mcp-output-to-value",
+  "name": "@milleleaf/mcp-output-to-value",
   "version": "0.1.0",
   "description": "Actor-neutral AI Output to Value decision gates over Model Context Protocol.",
   "type": "module",

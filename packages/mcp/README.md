@@ -1,4 +1,4 @@
-# @alreadyopen/mcp-output-to-value
+# @milleleaf/mcp-output-to-value
 
 Native Model Context Protocol access to the **AI Output to Value** decision framework.
 

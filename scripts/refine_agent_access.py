@@ -53,7 +53,7 @@ def main() -> None:
 
     text = text.replace(
         '<h3>WebMCP structured tools</h3>\n            <p>WebMCP lets a page expose structured application actions through <code>document.modelContext</code> so compatible agents can discover and invoke them instead of guessing every action from the visual UI.</p>',
-        '<h3>Native MCP for IDE and terminal agents</h3>\n            <p>The local <code>@alreadyopen/mcp-output-to-value</code> server exposes the same gate, evidence search, failure-mode search, and software Outcome template over stdio for MCP-capable IDE and terminal workflows.</p>',
+        '<h3>Native MCP for IDE and terminal agents</h3>\n            <p>The local <code>@milleleaf/mcp-output-to-value</code> server exposes the same gate, evidence search, failure-mode search, and software Outcome template over stdio for MCP-capable IDE and terminal workflows.</p>',
     )
 
     text = text.replace(

@@ -4,7 +4,7 @@ The publication keeps its existing Markdown/YAML/Python evidence and release-con
 
 ## Distribution status
 
-- **Version identity:** source package `@alreadyopen/ai-output-to-value-web` version `0.1.0`, plus the repository tag/commit used to build the publication artefact. The package is private source, not a published npm surface.
+- **Version identity:** source package `@milleleaf/ai-output-to-value-web` version `0.1.0`, plus the repository tag/commit used to build the publication artefact. The package is private source, not a published npm surface.
 - **Intended use:** build the interactive publication UI and the generated meeting-brief PDF from the canonical publication data.
 - **Support / compatibility boundary:** support is the tested React/TypeScript/Tailwind/pdfcn/Takumi toolchain in the pinned repository revision. Rendered UI/PDF checks may be part of the reviewed-method acceptance bar because those artefacts are in the publication; publishing this package to npm is not required and would be a separate tooling decision.
 
