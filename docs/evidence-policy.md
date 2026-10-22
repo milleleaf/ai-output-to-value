@@ -226,7 +226,7 @@ A passed release gate records completion of the project's declared controls for 
 
 The builder uses the build's source revision for links back to GitHub when available. This makes a released guide auditable after later edits.
 
-The source repository URL and AlreadyOpen umbrella URL are configuration values so an eventual repository transfer does not require rewriting publication logic.
+The source repository URL and Milleleaf umbrella URL are configuration values so an eventual repository transfer does not require rewriting publication logic.
 
 ## 13. Corrections
 

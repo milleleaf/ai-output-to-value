@@ -155,6 +155,6 @@ It also means we need to become more precise about what “done” means.
 
 ---
 
-This article is part of **[AI Output to Value](https://milleleaf.github.io/ai-output-to-value/)**, an [AlreadyOpen](https://github.com/milleleaf) project exploring AI-assisted work, evidence, accountability, and business value. The longer guide keeps claim-level evidence and review status visible so the framework can be challenged and corrected.
+This article is part of **[AI Output to Value](https://milleleaf.github.io/ai-output-to-value/)**, an [Milleleaf](https://github.com/milleleaf) project exploring AI-assisted work, evidence, accountability, and business value. The longer guide keeps claim-level evidence and review status visible so the framework can be challenged and corrected.
 
 **AI assistance disclosure:** AI tools were used during research, drafting, restructuring, and review of this article. I reviewed the argument and am responsible for the published version. When publishing on DEV, I will also select DEV's **AI-Assisted** disclosure setting.

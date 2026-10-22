@@ -104,7 +104,7 @@ After checking out the caller repository:
 
 ```yaml
 - name: AI Output to Value decision gate
-  uses: AlreadyOpen/ai-output-to-value@main
+  uses: milleleaf/ai-output-to-value@main
   with:
     claim: governance/claim.json
 ```
@@ -120,7 +120,7 @@ The Action exposes the gate result as step outputs, so a caller can branch on th
 ```yaml
 - name: AI Output to Value decision gate
   id: gate
-  uses: AlreadyOpen/ai-output-to-value@main
+  uses: milleleaf/ai-output-to-value@main
   with:
     claim: governance/claim.json
     fail-on-block: 'false'

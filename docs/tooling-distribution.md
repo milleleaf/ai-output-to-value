@@ -39,7 +39,7 @@ Every distributed surface must state a version identity, intended use, and suppo
 
 ### GitHub Action
 
-- **Version identity:** the repository tag or commit used in `uses: AlreadyOpen/ai-output-to-value@...`; there is no independent Action semver today. `@main` is a moving working-preview reference.
+- **Version identity:** the repository tag or commit used in `uses: milleleaf/ai-output-to-value@...`; there is no independent Action semver today. `@main` is a moving working-preview reference.
 - **Intended use:** apply the same deterministic Claim Gate to a caller repository's `claim.json` and expose the verdict as workflow outputs.
 - **Support / compatibility boundary:** supported behaviour is the behaviour of the pinned repository revision, its composite-action dependencies, and the GitHub Actions environment it was tested against. Callers should pin a reviewed tag or immutable commit for governed use. Availability of the Action does not mean the method has been reviewed, and a reviewed method release does not promise that every runner/host combination is supported.
 

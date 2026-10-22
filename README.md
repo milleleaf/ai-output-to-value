@@ -6,7 +6,7 @@
 
 **Live working preview:** https://milleleaf.github.io/ai-output-to-value/
 
-**Organisation:** [AlreadyOpen](https://github.com/milleleaf) · **Repository:** [AlreadyOpen/ai-output-to-value](https://github.com/milleleaf/ai-output-to-value)
+**Organisation:** [Milleleaf](https://github.com/milleleaf) · **Repository:** [milleleaf/ai-output-to-value](https://github.com/milleleaf/ai-output-to-value)
 
 ## Start here
 
