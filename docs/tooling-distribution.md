@@ -63,9 +63,9 @@ Every distributed surface must state a version identity, intended use, and suppo
 
 ### Agent skill and wrappers
 
-- **Version identity:** the repository tag or commit containing the canonical `toolkit/skills/applying-ai-output-to-value/SKILL.md`; there is no separately versioned registry package today.
-- **Intended use:** give coding/terminal agents the same decision-first stop rules and evidence boundaries used by the human-facing method.
-- **Support / compatibility boundary:** model and host behaviour can vary, so the skill is guidance rather than a deterministic proof mechanism. Any Claude Code, Cursor, Copilot, `AGENTS.md`, or future registry wrapper should remain a thin pointer to the canonical skill/contract and state the host versions it was tested against. Installing a skill does not establish a reviewed method, and a reviewed method release does not imply every wrapper is operationally supported.
+- **Version identity:** the repository tag or commit containing `toolkit/skills/applying-ai-output-to-value/SKILL.md` and `toolkit/skills/facilitating-the-decision-meeting/SKILL.md`. There is no separately versioned registry package today.
+- **Intended use:** `applying-ai-output-to-value` gives coding and terminal agents the decision-first stop rules. `facilitating-the-decision-meeting` walks the eight questions and fills the claim-card fields in prose, then stops when the decision and the next evidence are named.
+- **Support / compatibility boundary:** model and host behaviour can vary, so a skill is guidance rather than a deterministic proof mechanism. Any Claude Code, Cursor, Copilot, `AGENTS.md`, or future registry wrapper should remain a thin pointer to the canonical skill and state the host versions it was tested against. Do not publish either skill to a host registry until a repository tag contains the Access decision (`01-access` in `schemas/v1/decision-gates.json`). Tag `v0.1.0-rc.1` predates that decision. Until a later tag includes it, install from a pinned commit. Installing a skill does not establish a reviewed method, and a reviewed method release does not imply every wrapper is operationally supported. The native MCP server stays stdio from a pinned commit. It is not published to npm, and it is not hosted as a remote server, until the tagging policy in the checklist below is real. `blank_decision_record` returns an empty register row. It does not score a project.
 
 ## Cross-surface conformance
 

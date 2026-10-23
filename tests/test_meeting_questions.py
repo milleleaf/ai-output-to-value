@@ -41,6 +41,9 @@ class MeetingQuestionTests(unittest.TestCase):
             "index.html": re.findall(r"<li><span>[1-8]</span><p><strong>(.+?)</strong>", read("index.html")),
             "web/scripts/render-meeting-brief.tsx": quoted_list("web/scripts/render-meeting-brief.tsx", "const questions = ["),
             "webmcp.js": quoted_list("webmcp.js", "const MEETING_QUESTIONS = ["),
+            "toolkit/skills/facilitating-the-decision-meeting/SKILL.md": markdown_questions(
+                "toolkit/skills/facilitating-the-decision-meeting/SKILL.md"
+            ),
         }
         for name, found in surfaces.items():
             with self.subTest(surface=name):
@@ -50,6 +53,12 @@ class MeetingQuestionTests(unittest.TestCase):
         source = read("scripts/augment_site.py")
         self.assertNotIn("Which work disappeared", source)
         self.assertNotIn("<li><span>4</span>", source)
+
+    def test_meeting_skill_stops_when_the_decision_and_next_evidence_are_named(self):
+        skill = read("toolkit/skills/facilitating-the-decision-meeting/SKILL.md")
+        self.assertIn("When the decision sought and the next evidence are both named, stop.", skill)
+        self.assertIn("unless the user asks for a structured handoff", skill)
+        self.assertIn("Do not average claims.", skill)
 
     def test_facilitator_prompts_carry_the_detail_the_short_questions_drop(self):
         brief = read("content/meeting-brief.md")

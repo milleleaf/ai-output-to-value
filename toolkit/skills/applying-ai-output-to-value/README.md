@@ -120,6 +120,10 @@ python -m unittest tests.test_agent_skill_conformance
 
 These fixtures are a lightweight contract test for the packaged instructions. They are not a benchmark proving that every model will follow the skill perfectly.
 
+## Distribution hold
+
+Do not publish this skill, or [`facilitating-the-decision-meeting`](../facilitating-the-decision-meeting/SKILL.md), to a host registry until a repository tag contains the Access decision (`01-access` in `schemas/v1/decision-gates.json`). Tag `v0.1.0-rc.1` predates that decision. Until a later tag includes it, install from a pinned commit. The live schema URLs in `SKILL.md` follow the publication, which can move ahead of `v0.1.0-rc.1`.
+
 ## Canonical machine contract
 
 The skill defers to the same public machine-readable contract as the rest of the project:

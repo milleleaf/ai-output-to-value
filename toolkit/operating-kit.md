@@ -7,10 +7,10 @@ Choose instruments according to the failure mode and the decision being made.
 | Claim boundary | Evidence job | Typical instrument class | Examples |
 | --- | --- | --- | --- |
 | **Access → Output** | Confirm the tool can actually produce or perform the bounded task | usage inventory, reproducible fixture, tool/API log | organisation usage inventory; API/tool logs; a saved reproducible prompt/fixture |
-| **Output → Deliverable** | Test the named acceptance criteria and important failure modes | eval/trace system, deterministic fixture, contract test, end-to-end test | Promptfoo, Langfuse, Braintrust, or in-house fixtures; API contract tests; browser/e2e tests; the enquiry actually arriving at the intended business process |
-| **Deliverable → Operating capability** | Show the organisation can repeatedly operate, detect, recover, support, and change the workflow | CI/CD controls, observability, runbooks, rollback/recovery tests, ownership records | existing CI/CD platform; service telemetry; incident/runbook system; recovery rehearsal |
-| **Operating capability → Outcome** | Measure whether the end-to-end result changed against a baseline | product/operations measurement, DORA-capable delivery telemetry, experimental or quasi-experimental comparison | [Outcome worksheet](templates/outcome-worksheet.md); application/service delivery telemetry; baseline/after measurement; DORA software-delivery metrics for software work |
-| **Outcome → Value** | Account for relevant cost, labour movement, risk, alternatives and trade-offs | finance/cost records, incident cost, support effort, customer/business measure, decision log | [Value cost ledger](value-cost-ledger.md); internal cost data; cloud/model/tool spend; support and rework effort; business outcome and decision records |
+| **Output → Deliverable** | Test the named acceptance criteria and important failure modes | eval/trace system, deterministic fixture, contract test, end-to-end test | Promptfoo, Langfuse, or the UK AI Security Institute's Inspect AI, re-run on the same fixture; plus the enquiry, file, or test that shows the result arrived |
+| **Deliverable → Operating capability** | Show the organisation can repeatedly operate, detect, recover, support, and change the workflow | CI/CD controls, observability, runbooks, rollback/recovery tests, ownership records | the CI, ownership record, and incident/runbook system already in use; the decision register's owner and stop date |
+| **Operating capability → Outcome** | Measure whether the end-to-end result changed against a baseline | product/operations measurement, DORA-capable delivery telemetry, experimental or quasi-experimental comparison | [Outcome worksheet](templates/outcome-worksheet.md), including what was predicted before the trial beside what was measured; for software delivery, the [DORA pack](templates/software-outcome-pack.json) |
+| **Outcome → Value** | Account for relevant cost, labour movement, risk, alternatives and trade-offs | finance/cost records, incident cost, support effort, customer/business measure, decision log | [Value cost ledger](value-cost-ledger.md), filled from internal cost records |
 
 The stable machine identifier for **Operating capability** remains `04-capability`.
 
@@ -19,6 +19,10 @@ The stable machine identifier for **Operating capability** remains `04-capabilit
 Repository, documentation, ticket, log, browser and data MCP/skill integrations can give an agent better context and make the workflow more inspectable. That can materially improve **Access**, **Output**, and the evidence-gathering process.
 
 They do not mint Value simply because the agent can reach more systems.
+
+GitHub, Linear, or an observability MCP can make evidence easier to retrieve. They stay context pipes. Installing one is an Access fact.
+
+An agent about to say the work is done, production ready, verified, or worth the cost uses [`applying-ai-output-to-value`](skills/applying-ai-output-to-value/SKILL.md), plus this repository's native MCP server once that server is pinned to a commit. A meeting that only needs the eight questions uses [`facilitating-the-decision-meeting`](skills/facilitating-the-decision-meeting/SKILL.md) and stops when the decision and the next evidence are named. Neither skill is published to a host registry until a repository tag contains the Access decision. Tag `v0.1.0-rc.1` does not.
 
 Ask instead:
 
@@ -40,7 +44,9 @@ For a software-delivery initiative, the project provides a [software Outcome pac
 
 When AI-assisted delivery is the intervention, also consider leading indicators such as the share of AI-touched changes, review wait time for those changes, and revert/rollback rate for those changes.
 
-Use the [general Outcome worksheet](templates/outcome-worksheet.md) to record baseline/after values, definition consistency, confounds, adverse effects, attribution qualification, evidence sources, and the reversal rule. These are measurement suggestions, not automatic evidence that AI caused the result or that the result created business Value.
+Use the [general Outcome worksheet](templates/outcome-worksheet.md) to record baseline/after values, what was predicted before the trial beside what was measured, definition consistency, confounds, adverse effects, attribution qualification, evidence sources, and the reversal rule. These are measurement suggestions, not automatic evidence that AI caused the result or that the result created business Value.
+
+Keep open decisions on the [decision register](templates/decision-register.md): one row per decision, with status `PASS`, `BLOCKED`, or `INSUFFICIENT EVIDENCE`. The same project may have several rows. The register has no average.
 
 ## Keep the operating kit proportionate
 

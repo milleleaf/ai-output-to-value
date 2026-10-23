@@ -109,7 +109,7 @@ Same standard does not require the same interface.
 
 The practical IDE/terminal integration is the local MCP package under [`packages/mcp/`](packages/mcp/). Its README includes current Claude Code, Cursor and VS Code/GitHub Copilot examples. WebMCP remains progressive enhancement when the browser exposes `document.modelContext`.
 
-For coding agents that need a claim-language guardrail before saying **done**, **production ready**, **validated/verified**, or **ROI/Value proved**, install the canonical [`applying-ai-output-to-value` agent skill](toolkit/skills/applying-ai-output-to-value/README.md). It ships with thin Cursor, Copilot and `AGENTS.md` wrappers that point back to one `SKILL.md` rather than duplicating the framework.
+For coding agents that need a claim-language guardrail before saying **done**, **production ready**, **validated/verified**, or **ROI/Value proved**, install the canonical [`applying-ai-output-to-value` agent skill](toolkit/skills/applying-ai-output-to-value/README.md). It ships with thin Cursor, Copilot and `AGENTS.md` wrappers that point back to one `SKILL.md` rather than duplicating the framework. For a meeting, [`facilitating-the-decision-meeting`](toolkit/skills/facilitating-the-decision-meeting/README.md) walks the eight questions and stops when the decision and the next evidence are named. Neither skill is published to a host registry until a repository tag contains the Access decision. Tag `v0.1.0-rc.1` does not.
 
 ## Private evidence can stay private
 
@@ -121,7 +121,7 @@ Use [`toolkit/private-workbook/`](toolkit/private-workbook/) for real work. The 
 
 [`toolkit/operating-kit.md`](toolkit/operating-kit.md) points to classes of instrument that can inspect a claim: evaluation/trace, contract/e2e testing, operational evidence, DORA-capable delivery telemetry, usage inventories, and cost/value records.
 
-For the two upper decision claims, use the fillable [Outcome worksheet](toolkit/templates/outcome-worksheet.md) and [Value cost ledger](toolkit/value-cost-ledger.md). They keep baseline/after evidence, elapsed time, labour movement, confounds, adverse effects, attribution, full cost boundaries, and option value explicit without auto-populating Claim Gate PASS states.
+For the two upper decision claims, use the fillable [Outcome worksheet](toolkit/templates/outcome-worksheet.md) and [Value cost ledger](toolkit/value-cost-ledger.md). They keep baseline/after evidence, the prediction made before the trial beside the measurement, elapsed time, labour movement, confounds, adverse effects, attribution, full cost boundaries, and option value explicit without auto-populating Claim Gate PASS states. Open decisions sit on the [decision register](toolkit/templates/decision-register.md): one row per decision, with no average.
 
 MCP servers, skills, repository tools, documentation connectors and log access are **context pipes**. They can improve Access, Output and evidence retrieval; they do not mint Value merely because they are connected.
 
@@ -184,9 +184,9 @@ GitHub Pages runs the same relevant evidence, interaction, Action, MCP, UI and a
 ├── schemas/v1/                     # claim.json and decision-gate contracts
 ├── toolkit/
 │   ├── samples/                    # Filled teaching claim records
-│   ├── templates/                  # General + software Outcome instruments
+│   ├── templates/                  # Outcome worksheet, decision register, software pack
 │   ├── private-workbook/           # Confidential-use folder template
-│   ├── skills/                     # Canonical agent skill + thin wrappers/fixtures
+│   ├── skills/                     # Overclaim skill, meeting skill, thin wrappers
 │   ├── AGENT_RULES.md
 │   ├── operating-kit.md
 │   └── value-cost-ledger.md        # Fillable Value decision workbook

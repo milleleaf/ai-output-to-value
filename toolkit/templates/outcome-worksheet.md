@@ -32,11 +32,17 @@ Keep the measurement definition and scope comparable. If the definition changed,
 | **Elapsed time** — when relevant |  |  |  |
 | **Labour hours** — when relevant |  |  |  |
 
+| What we predicted before the trial | What we measured |
+| --- | --- |
+|  |  |
+
 **Consistent definition check:** yes / no / qualified
 
 **If qualified or no, what changed?**
 
 Elapsed time and labour hours are separate quantities. A process can become faster for the customer while consuming the same or more staff time, or reduce staff effort without shortening end-to-end elapsed time. Do not infer one from the other.
+
+Record what was predicted before the trial beside what was measured. The prediction is not the outcome. METR's early-2025 trial, cited in Start Here, is the reminder: the developers expected a speed-up, and measured completion time was longer. Write both down. Use only the measurement as the outcome value.
 
 ## 3. Confounds, adverse effects, and attribution
 
@@ -80,6 +86,10 @@ A positive Outcome does not by itself establish **06 Value**. Cost, labour movem
 | Median elapsed time to first substantive review | 12.0 h | 8.5 h |
 | Reviewer labour per PR | 0.42 h | 0.45 h |
 | PRs requiring a second corrective review | 13% | 14% |
+
+**What we predicted before the trial:** median elapsed time to first substantive review would fall to 6.0 h.
+
+**What we measured:** 8.5 h. The forecast is not the outcome.
 
 **Consistent definition check:** yes — the same repository, review-state definition, and exclusion rule were used.
 

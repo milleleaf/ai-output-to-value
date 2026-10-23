@@ -47,4 +47,22 @@ export function evaluateClaim(record, gates, claimSchema = bundledClaimSchema) {
   return evaluateWithSchema(record, gates, claimSchema);
 }
 
+export function blankDecisionRecord() {
+  return {
+    instructions:
+      "One row per decision. The same project may have several rows. Status is only PASS, BLOCKED, or INSUFFICIENT_EVIDENCE. Leave status empty until a gate result exists for that row. Do not average rows and do not report a count of claims.",
+    statusValues: ["PASS", "BLOCKED", "INSUFFICIENT_EVIDENCE"],
+    row: {
+      decision: "",
+      intendedUse: "",
+      subjectScope: "",
+      requiredClaim: "",
+      status: "",
+      owner: "",
+      nextEvidence: "",
+      stopDate: ""
+    }
+  };
+}
+
 export { getStopRule };

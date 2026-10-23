@@ -49,7 +49,9 @@ The tool can copy Markdown/JSON, download JSON, and print a compact decision rec
 
 ## 4. Fill the Outcome worksheet when the decision is 05 Outcome
 
-Use [`templates/outcome-worksheet.md`](templates/outcome-worksheet.md) for the general Outcome decision. It requires the decision/intervention, workflow or population, outcome measure, baseline period/value, after or comparison period/value, consistent-definition check, material confounds, adverse effects, attribution qualification, evidence source, and the result that would reverse the conclusion.
+Use [`templates/outcome-worksheet.md`](templates/outcome-worksheet.md) for the general Outcome decision. It requires the decision/intervention, workflow or population, outcome measure, baseline period/value, after or comparison period/value, what was predicted before the trial beside what was measured, consistent-definition check, material confounds, adverse effects, attribution qualification, evidence source, and the result that would reverse the conclusion.
+
+Keep one row per open decision on [`templates/decision-register.md`](templates/decision-register.md). Status is only `PASS`, `BLOCKED`, or `INSUFFICIENT EVIDENCE`. The same project may have several rows. The register has no average and no count of claims.
 
 When time is relevant, **elapsed time and labour hours are recorded separately**. Faster elapsed time is not automatically labour saved.
 
@@ -176,7 +178,11 @@ This repository's [pull request template](../.github/pull_request_template.md) i
 
 ## 9. Install the agent skill / give agents the same rules
 
-The canonical agent contract is [`skills/applying-ai-output-to-value/SKILL.md`](skills/applying-ai-output-to-value/SKILL.md). Use it when an agent is about to say work is done/complete, client-ready, production-ready, validated/verified, ready to operate, has demonstrated Outcome/ROI/Value, or is justified to scale/renew/expand.
+The canonical agent contract for an overclaim is [`skills/applying-ai-output-to-value/SKILL.md`](skills/applying-ai-output-to-value/SKILL.md). Use it when an agent is about to say work is done/complete, client-ready, production-ready, validated/verified, ready to operate, has demonstrated Outcome/ROI/Value, or is justified to scale/renew/expand.
+
+For a meeting, use [`skills/facilitating-the-decision-meeting/SKILL.md`](skills/facilitating-the-decision-meeting/SKILL.md). It walks the eight questions, fills the claim-card fields in prose, and stops when the decision and the next evidence are named. It does not write `claim.json` unless someone asks for a structured handoff.
+
+Do not publish either skill to a host registry until a repository tag contains the Access decision. Tag `v0.1.0-rc.1` does not. Install from a pinned commit until then.
 
 For Claude Code installation, a one-copy multi-agent layout, thin Cursor/Copilot/`AGENTS.md` wrappers, and conformance fixtures, see the [agent-skill package README](skills/applying-ai-output-to-value/README.md).
 
@@ -209,6 +215,7 @@ The public site generates:
 - `/api/v1/sources.json`
 - `/api/v1/failure-modes.json` in the working preview;
 - `/templates/outcome-worksheet.md`;
+- `/templates/decision-register.md`;
 - `/templates/software-outcome-pack.json`;
 - `/templates/value-cost-ledger.md`;
 - `/samples/*.claim.json`.

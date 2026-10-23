@@ -5,6 +5,7 @@ import * as z from "zod/v4";
 
 import {
   DEFAULT_PUBLICATION_URL,
+  blankDecisionRecord,
   evaluateClaim,
   fetchJson,
   getStopRule,
@@ -152,6 +153,16 @@ function buildServer() {
         return fail(error instanceof Error ? error.message : String(error));
       }
     }
+  );
+
+  server.registerTool(
+    "blank_decision_record",
+    {
+      title: "Blank decision register row",
+      description: "Return an empty decision-register row for a human meeting note. One row is one decision. This does not score a project, average claims, or evaluate evidence.",
+      inputSchema: z.object({})
+    },
+    async () => text(blankDecisionRecord())
   );
 
   server.registerTool(

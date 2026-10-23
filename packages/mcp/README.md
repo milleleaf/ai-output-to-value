@@ -62,6 +62,7 @@ The package test suite compares the bundled schemas with the canonical repositor
 - `list_articles(section?)` — articles included in the currently published artifact.
 - `search_claims(query, limit?)` — canonical claim records from the current publication artifact.
 - `search_failure_modes(query, limit?)` — working software/architecture failure-mode catalogue.
+- `blank_decision_record()` — an empty decision-register row. One row is one decision. It does not score a project or evaluate evidence. The human template is `toolkit/templates/decision-register.md`.
 
 > **Gate ≠ truth.** A green result means the supplied record satisfies the deterministic gate for the selected decision. It is not an audit of the underlying system or evidence.
 

@@ -7,6 +7,7 @@ import { dirname, resolve } from "node:path";
 import { caseInput, checkCase } from "../../../tests/conformance-harness.mjs";
 
 import {
+  blankDecisionRecord,
   evaluateClaim,
   getStopRule,
   loadBundledClaimSchema,
@@ -28,6 +29,26 @@ function record() {
 function evaluate(value) {
   return evaluateClaim(value, gates, claimSchema);
 }
+
+test("blank decision record is one empty row and does not score a project", () => {
+  const blank = blankDecisionRecord();
+  assert.deepEqual(Object.keys(blank.row), [
+    "decision",
+    "intendedUse",
+    "subjectScope",
+    "requiredClaim",
+    "status",
+    "owner",
+    "nextEvidence",
+    "stopDate"
+  ]);
+  assert.deepEqual(blank.statusValues, ["PASS", "BLOCKED", "INSUFFICIENT_EVIDENCE"]);
+  assert.equal(blank.row.status, "");
+  assert.equal("score" in blank, false);
+  assert.equal("score" in blank.row, false);
+  assert.match(blank.instructions, /One row per decision/);
+  assert.match(blank.instructions, /Do not average/);
+});
 
 test("bundled decision rules match canonical repository rules", () => {
   assert.deepEqual(gates, canonicalGates);
