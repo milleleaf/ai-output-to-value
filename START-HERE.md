@@ -24,7 +24,7 @@ Start with the decision you need to make, then ask:
 
 Record the discussion with either the **[Claim Card](content/claim-card.md)** or the **[one-page meeting brief](content/meeting-brief.md)**. Then inspect the evidence that matters for the decision.
 
-If a portable machine-readable handoff is useful **after or alongside the human record**, use the [interactive Claim Gate](https://alreadyopen.github.io/ai-output-to-value/tools/claim-gate.html) to import or export `claim.json`. That structured record is optional; it is not the conceptual front door.
+If a portable machine-readable handoff is useful **after or alongside the human record**, use the [interactive Claim Gate](https://milleleaf.github.io/ai-output-to-value/tools/claim-gate.html) to import or export `claim.json`. That structured record is optional; it is not the conceptual front door.
 
 
 ## Six different claims, not six mandatory steps

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
+  "schemaVersion": "1.0",
+  "project": "Round-trip fixture: every optional field and three actors",
+  "targetDecision": "rely",
+  "requiredClaimLevel": "03-deliverable",
+  "assertedClaimLevel": "02-output",
+  "intendedUse": "Permit the report to be relied on as the organisation's approved professional deliverable for an external submission under its own approval policy.",
+  "workflowBoundary": "Evidence is gathered; the report is drafted; technical content is reviewed; required approval authority is confirmed; the authorised signatory accepts the report; the approved version is submitted.",
+  "workflowCompletion": "The report is complete when technical acceptance criteria pass and the organisation's required approval/signatory authority is evidenced for the submitted version.",
+  "downstreamHandoffs": [
+    "Technical review",
+    "Organisational approval/signatory check",
+    "Controlled external submission"
+  ],
+  "movedBottleneck": "Fast drafting shifts the constraint to evidence quality, assurance, version control, and confirmation that the person approving the work has the required organisational authority.",
+  "unhappyPath": "A knowledgeable reviewer says the report looks technically sound, but the record does not show that this reviewer is authorised to approve the external deliverable or that the reviewed version is the submitted version.",
+  "evidenceCharacter": [
+    "illustrative"
+  ],
+  "actors": [
+    {
+      "type": "ai-agent",
+      "role": "Draft the report from supplied evidence.",
+      "interactionChannel": "human-ui"
+    },
+    {
+      "type": "human",
+      "role": "Perform technical review of the draft.",
+      "interactionChannel": "human-ui"
+    },
+    {
+      "type": "specialist-tool",
+      "role": "Check citations against the evidence register.",
+      "interactionChannel": "cli"
+    }
+  ],
+  "assurance": [
+    "Technical review against the named criteria",
+    "Evidence traceability",
+    "Version-controlled approval record"
+  ],
+  "authority": "The technical reviewer is authorised to comment on quality, but the current record does not establish the separate approval/signatory authority required by the organisation's submission policy.",
+  "accountability": "The organisation's deliverable owner is accountable for confirming both technical acceptance and the required approval authority before external reliance.",
+  "demonstrated": "The draft was reviewed for technical content and no material technical error was recorded in the review note.",
+  "inferredOrAssumed": "The phrase 'a human reviewed it' was initially treated as if it also proved approval authority and submission readiness. Those are separate claims.",
+  "knownLimitations": [
+    "Approval/signatory authority for the reviewed version is not evidenced.",
+    "The version-control link between the reviewed draft and the proposed submitted version is incomplete."
+  ],
+  "acceptanceCriteria": [
+    "Technical criteria are reviewed against the named evidence.",
+    "Material claims are traceable to approved evidence.",
+    "The required organisational approver/signatory is identified and authorised.",
+    "The approved version is the version released externally."
+  ],
+  "evidenceRefs": [
+    "Illustrative technical review note",
+    "Illustrative evidence index",
+    "Approval/signatory record not supplied"
+  ],
+  "gateChecks": {
+    "intended-use-defined": "pass",
+    "acceptance-criteria-defined": "pass",
+    "acceptance-criteria-met": "unknown",
+    "failure-modes-tested": "pass",
+    "limitations-stated": "pass"
+  },
+  "nextEvidence": "Provide the approval/signatory authority record, bind it to the reviewed version, and confirm that all Deliverable acceptance criteria are met for the external submission.",
+  "stopRule": "Keep the report in draft/review status. Do not equate technical review with organisational or legal authority to release the deliverable.",
+  "notes": "Synthetic record for the Claim Gate import/export round-trip check. Not an example of a real decision.",
+  "outcomeMeasure": "Share of submitted reports returned for authority gaps.",
+  "baseline": "Two of the last ten submissions were returned.",
+  "fullRelevantCostBoundary": "Drafting, review and approval time, plus rework after return.",
+  "optionValue": "Learning which approval steps can be evidenced automatically."
+}

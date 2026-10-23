@@ -4,7 +4,7 @@
 
 Please report a suspected vulnerability **privately**, not in a public issue or discussion:
 
-**[Report a vulnerability](https://github.com/AlreadyOpen/ai-output-to-value/security/advisories/new)** (GitHub private vulnerability reporting for this repository).
+**[Report a vulnerability](https://github.com/milleleaf/ai-output-to-value/security/advisories/new)** (GitHub private vulnerability reporting for this repository).
 
 Include what you found, the file or surface affected, the version or commit, and the smallest input or steps that reproduce it. This project is maintained by one person, so there is no fixed response time, but reports are read and acknowledged on a best-effort basis.
 
@@ -19,7 +19,7 @@ A claim gate that returns a wrong verdict for a malformed record is a correctnes
 
 ## What is out of scope
 
-- factual, evidentiary or wording errors in the guide: use the [correction issue template](https://github.com/AlreadyOpen/ai-output-to-value/issues/new?template=correction.yml);
+- factual, evidentiary or wording errors in the guide: use the [correction issue template](https://github.com/milleleaf/ai-output-to-value/issues/new?template=correction.yml);
 - disagreement with the method itself;
 - a gate result being read as an audit. A gate result evaluates only the supplied decision record.
 

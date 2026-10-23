@@ -39,13 +39,13 @@ Every distributed surface must state a version identity, intended use, and suppo
 
 ### GitHub Action
 
-- **Version identity:** the repository tag or commit used in `uses: AlreadyOpen/ai-output-to-value@...`; there is no independent Action semver today. `@main` is a moving working-preview reference.
+- **Version identity:** the repository tag or commit used in `uses: milleleaf/ai-output-to-value@...`; there is no independent Action semver today. `@main` is a moving working-preview reference.
 - **Intended use:** apply the same deterministic Claim Gate to a caller repository's `claim.json` and expose the verdict as workflow outputs.
 - **Support / compatibility boundary:** supported behaviour is the behaviour of the pinned repository revision, its composite-action dependencies, and the GitHub Actions environment it was tested against. Callers should pin a reviewed tag or immutable commit for governed use. Availability of the Action does not mean the method has been reviewed, and a reviewed method release does not promise that every runner/host combination is supported.
 
 ### Native MCP / optional npm distribution
 
-- **Version identity:** source package `@alreadyopen/mcp-output-to-value` version `0.1.0`; the package is currently `private: true` and is not published to npm.
+- **Version identity:** source package `@milleleaf/mcp-output-to-value` version `0.1.0`; the package is currently `private: true` and is not published to npm.
 - **Intended use:** local stdio MCP access for IDE, desktop, and terminal agents to query the framework and evaluate supplied claim records.
 - **Support / compatibility boundary:** current source requires Node.js 20+ and supports stdio as the first transport. Host-specific MCP behaviour, future Streamable HTTP deployment, npm publication, and package-manager support are separate distribution decisions. If npm publication is chosen later, that package release must state the method/contract revision it consumes. npm publication by itself must never be presented as evidence that the method was independently reviewed.
 
@@ -57,7 +57,7 @@ Every distributed surface must state a version identity, intended use, and suppo
 
 ### Web UI and PDF build package
 
-- **Version identity:** source package `@alreadyopen/ai-output-to-value-web` version `0.1.0`; it is private source used to build the publication artefact rather than a published npm package.
+- **Version identity:** source package `@milleleaf/ai-output-to-value-web` version `0.1.0`; it is private source used to build the publication artefact rather than a published npm package.
 - **Intended use:** build the interactive React/Tailwind Claim Gate UI and the pdfcn/Takumi meeting-brief PDF on top of canonical publication data.
 - **Support / compatibility boundary:** compatibility is the tested build/toolchain in the pinned repository revision. Rendered UI/PDF checks can be part of the reviewed-method acceptance bar because those artefacts are in the publication; publishing the web package to npm is not required and would be a separate distribution decision.
 

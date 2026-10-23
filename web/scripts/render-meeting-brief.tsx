@@ -84,7 +84,7 @@ const pdf = await render(<MeetingBrief />, {
   lang: "en",
   metadata: {
     title: "AI Output to Value — One-page meeting brief",
-    authors: ["AlreadyOpen"],
+    authors: ["Milleleaf"],
   },
 })
 

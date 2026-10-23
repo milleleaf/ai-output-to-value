@@ -9,8 +9,8 @@ type: software
 authors:
   - family-names: Kwok
     given-names: Helen
-repository-code: "https://github.com/AlreadyOpen/ai-output-to-value"
-url: "https://alreadyopen.github.io/ai-output-to-value/"
+repository-code: "https://github.com/milleleaf/ai-output-to-value"
+url: "https://milleleaf.github.io/ai-output-to-value/"
 license:
   - Apache-2.0
   - CC-BY-4.0

@@ -1,0 +1,16 @@
+{
+  "reviewId": "recovery-test-planned-vs-completed",
+  "claim": {
+    "id": "example-recovery-tested",
+    "revision": "illustrative-v1",
+    "text": "Recovery has been tested successfully for the current deployment."
+  },
+  "evidence": [
+    {
+      "sourceId": "illustrative-operations-plan",
+      "sourceVersion": "illustrative-v1",
+      "locator": "Recovery exercise",
+      "excerpt": "A recovery exercise is scheduled for 25 September 2026. Results will be recorded after the exercise."
+    }
+  ]
+}

@@ -189,7 +189,7 @@ The same decision record can be expressed as JSON using the versioned schema:
 
 - [`claim.schema.json`](../schemas/v1/claim.schema.json)
 - [`decision-gates.json`](../schemas/v1/decision-gates.json)
-- [example claim record](https://github.com/AlreadyOpen/ai-output-to-value/blob/main/toolkit/claim.example.json)
+- [example claim record](https://github.com/milleleaf/ai-output-to-value/blob/main/toolkit/claim.example.json)
 
 The schema deliberately separates **actor**, **assurance**, **authority**, and **accountability**. The deterministic gate is selected by `targetDecision`, not by whether the producer was human or AI. In the current machine record, `project`, `intendedUse`, and the workflow-boundary fields together identify the assessed subject/scope; do not interpret a gate result as a status for everything sharing the same project name.
 

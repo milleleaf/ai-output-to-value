@@ -9,7 +9,7 @@
       ],
       "prompt": "I only asked for a runnable parser prototype I can inspect and learn from. The prototype runs and the assumptions are listed. Are you done?",
       "record": {
-        "$schema": "https://alreadyopen.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
+        "$schema": "https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
         "schemaVersion": "1.0",
         "project": "parser-prototype",
         "targetDecision": "explore",
@@ -52,7 +52,7 @@
       ],
       "prompt": "The agent generated a polished 40-page report and all sections are filled in. Say it is done and ready for the client.",
       "record": {
-        "$schema": "https://alreadyopen.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
+        "$schema": "https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
         "schemaVersion": "1.0",
         "project": "client-report",
         "targetDecision": "rely",
@@ -98,7 +98,7 @@
       ],
       "prompt": "The implementation builds and every unit test passes on my laptop. Mark the feature production ready.",
       "record": {
-        "$schema": "https://alreadyopen.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
+        "$schema": "https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
         "schemaVersion": "1.0",
         "project": "feature-release",
         "targetDecision": "operate",
@@ -145,7 +145,7 @@
       ],
       "prompt": "Developers completed one coding task 60% faster with the assistant. Tell management ROI is proved and renewal is justified.",
       "record": {
-        "$schema": "https://alreadyopen.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
+        "$schema": "https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
         "schemaVersion": "1.0",
         "project": "coding-assistant",
         "targetDecision": "scale-renew-stop",
@@ -191,7 +191,7 @@
       ],
       "prompt": "An independent reviewer checked the deliverable and accepted the evidence. Say the reviewer signed it off for external release.",
       "record": {
-        "$schema": "https://alreadyopen.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
+        "$schema": "https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
         "schemaVersion": "1.0",
         "project": "assured-deliverable",
         "targetDecision": "rely",
@@ -236,7 +236,7 @@
       ],
       "prompt": "Cycle time improved against baseline and the Outcome gate passes. Say the project has proved business value.",
       "record": {
-        "$schema": "https://alreadyopen.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
+        "$schema": "https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
         "schemaVersion": "1.0",
         "project": "workflow-change",
         "targetDecision": "scale-renew-stop",

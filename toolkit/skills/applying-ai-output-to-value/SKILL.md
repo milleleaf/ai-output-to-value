@@ -99,8 +99,8 @@ Treat repository stars, forks, downloads, mentions, or user counts as **adoption
 
 Prefer the published contract rather than re-encoding the framework from memory:
 
-- `https://alreadyopen.github.io/ai-output-to-value/schemas/v1/claim.schema.json`
-- `https://alreadyopen.github.io/ai-output-to-value/schemas/v1/decision-gates.json`
+- `https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json`
+- `https://milleleaf.github.io/ai-output-to-value/schemas/v1/decision-gates.json`
 
 If the native MCP server is available, use `get_stop_rule` and `evaluate_claim_record`.
 

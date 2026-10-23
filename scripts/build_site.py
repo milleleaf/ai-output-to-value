@@ -15,8 +15,8 @@ from publication_data import load_yaml, source_map
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
-REPO_URL = os.environ.get("PUBLICATION_REPO_URL", "https://github.com/AlreadyOpen/ai-output-to-value")
-UMBRELLA_URL = os.environ.get("PUBLICATION_UMBRELLA_URL", "https://github.com/AlreadyOpen")
+REPO_URL = os.environ.get("PUBLICATION_REPO_URL", "https://github.com/milleleaf/ai-output-to-value")
+UMBRELLA_URL = os.environ.get("PUBLICATION_UMBRELLA_URL", "https://github.com/milleleaf")
 SOURCE_REF = os.environ.get("PUBLICATION_SOURCE_REF") or os.environ.get("GITHUB_SHA") or "main"
 PUBLICATION_MODE = os.environ.get("PUBLICATION_MODE", "preview").strip().lower()
 RELEASE_SCOPES = {"guide", "policy"}
@@ -81,7 +81,7 @@ def repo_slug() -> str:
     marker = "github.com/"
     if marker in REPO_URL:
         return REPO_URL.rstrip("/").split(marker, 1)[1]
-    return "AlreadyOpen/ai-output-to-value"
+    return "milleleaf/ai-output-to-value"
 
 
 def article_toolbar(item: dict) -> str:
@@ -128,8 +128,8 @@ def page_shell(title: str, body: str, source: str | None = None, meta: str = "",
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="shell header-inner"><a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">O→V</span><span>AI Output to Value</span></a>{site_nav.primary("../")}</div></header>
 {site_nav.mobile("../")}
-<main id="main" class="article-shell"><article class="article-body"><div class="article-meta"><span class="review-scope">{mode_label}</span><br>{meta}</div>{tools_html}{body}</article><aside class="article-aside" aria-label="Article links"><strong>AI Output to Value</strong><a href="../index.html">Home</a><a href="../tools/claim-gate.html">Interactive claim gate</a><a href="{site_nav.MCP_URL}">AI access</a><a href="../articles/index.html">All articles</a><a href="../evidence/index.html">Evidence</a>{source_link}<a href="{UMBRELLA_URL}">AlreadyOpen umbrella</a><a href="../articles/provenance.html">Provenance</a><a href="../articles/corrections.html">Report a correction</a></aside></main>
-<footer class="site-footer"><div class="shell footer-inner"><p><strong>AI Output to Value</strong> · <a href="{UMBRELLA_URL}">An AlreadyOpen project</a></p><p><a href="../articles/provenance.html">Provenance</a> · <a href="{REPO_URL}">GitHub</a> · <a href="../articles/corrections.html">Corrections</a></p></div></footer>
+<main id="main" class="article-shell"><article class="article-body"><div class="article-meta"><span class="review-scope">{mode_label}</span><br>{meta}</div>{tools_html}{body}</article><aside class="article-aside" aria-label="Article links"><strong>AI Output to Value</strong><a href="../index.html">Home</a><a href="../tools/claim-gate.html">Interactive claim gate</a><a href="{site_nav.MCP_URL}">AI access</a><a href="../articles/index.html">All articles</a><a href="../evidence/index.html">Evidence</a>{source_link}<a href="{UMBRELLA_URL}">Milleleaf umbrella</a><a href="../articles/provenance.html">Provenance</a><a href="../articles/corrections.html">Report a correction</a></aside></main>
+<footer class="site-footer"><div class="shell footer-inner"><p><strong>AI Output to Value</strong> · <a href="{UMBRELLA_URL}">An Milleleaf project</a></p><p><a href="../articles/provenance.html">Provenance</a> · <a href="{REPO_URL}">GitHub</a> · <a href="../articles/corrections.html">Corrections</a></p></div></footer>
 <script src="../webmcp.js" defer></script>
 <script src="../article-tools.js" defer></script>
 </body></html>"""
