@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea"
 import { cn } from "@/lib/utils"
 import { formVerdict } from "@/lib/verdict"
+import { DEFAULT_ACTOR_ROLE, exportClaimRecord } from "@/lib/claim-record"
 import { evaluateClaim } from "@gate-core"
 
 type CheckState = "unknown" | "pass" | "fail" | "not-applicable"
@@ -238,6 +239,8 @@ export function ClaimGateApp() {
   const [handoffMessage, setHandoffMessage] = React.useState<string | null>(null)
   const importRef = React.useRef<HTMLInputElement>(null)
   const [state, setState] = React.useState<FormState>(blankState)
+  // The last record loaded into the form; its fields the form does not edit are exported unchanged.
+  const [loaded, setLoaded] = React.useState<Record<string, unknown> | null>(null)
 
   React.useEffect(() => {
     Promise.all([
@@ -316,6 +319,7 @@ export function ClaimGateApp() {
       stopRule: textValue(item.stopRule),
       checks,
     })
+    setLoaded(item)
     setHandoffMessage(
       problems.length
         ? `${source} loaded into the local form with ${problems.length} problem${problems.length === 1 ? "" : "s"} the gate would reject: ${problems.slice(0, 3).join("; ")}${problems.length > 3 ? "; …" : ""}. Fix them before relying on the result.`
@@ -464,13 +468,13 @@ export function ClaimGateApp() {
   ]
   if (!reasons.length && status === "PASS") reasons.push("All required checks and decision-record fields are present.")
 
-  function record() {
+  function formRecord() {
     if (!rule) return null
     const actors = state.actor === "unselected"
       ? []
       : [{
           type: state.actor,
-          role: "Primary actor for the assessed workflow",
+          role: DEFAULT_ACTOR_ROLE,
           ...(state.channel === "unselected" ? {} : { interactionChannel: state.channel }),
         }]
     return {
@@ -500,8 +504,17 @@ export function ClaimGateApp() {
     }
   }
 
+  function record() {
+    const item = formRecord()
+    if (!item) return null
+    const actor = state.actor === "unselected"
+      ? null
+      : { type: state.actor, ...(state.channel === "unselected" ? {} : { interactionChannel: state.channel }) }
+    return exportClaimRecord(loaded, item, actor)
+  }
+
   function markdownSummary() {
-    const item = record()
+    const item = formRecord()
     if (!item || !rule) return ""
     const rows = rule.requiredChecks
       .map((check) => `- **${(item.gateChecks[check.id] || "unknown").toUpperCase()}** — ${check.label}`)
@@ -548,7 +561,7 @@ export function ClaimGateApp() {
     const href = URL.createObjectURL(blob)
     const link = document.createElement("a")
     link.href = href
-    link.download = `${item.project || "claim"}.claim.json`
+    link.download = `${state.project.trim() || "claim"}.claim.json`
     document.body.appendChild(link)
     link.click()
     link.remove()
