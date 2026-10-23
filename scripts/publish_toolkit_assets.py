@@ -28,14 +28,19 @@ def main() -> None:
     private_source = ROOT / "toolkit" / "private-workbook"
     downloads = SITE / "downloads"
     downloads.mkdir(parents=True, exist_ok=True)
-    copy_tree(private_source, downloads / "private-workbook")
+    workbook = downloads / "private-workbook"
+    copy_tree(private_source, workbook)
+    # The workbook is downloaded on its own, so it carries its own copy of the register.
+    register = ROOT / "toolkit" / "templates" / "decision-register.md"
+    if private_source.exists() and register.exists():
+        shutil.copy2(register, workbook / "decision-register.md")
 
     archive_base = downloads / "ai-output-to-value-private-workbook"
     archive_path = archive_base.with_suffix(".zip")
     if archive_path.exists():
         archive_path.unlink()
     if private_source.exists():
-        shutil.make_archive(str(archive_base), "zip", root_dir=private_source)
+        shutil.make_archive(str(archive_base), "zip", root_dir=workbook)
 
     print("Published Claim Gate samples, Outcome/Value instruments, and private workbook")
 

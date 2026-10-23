@@ -12,6 +12,7 @@ The method needs inspectable evidence for the people authorised to make the deci
 private-review/
 ├── decision.md
 ├── claim.json
+├── decision-register.md
 └── evidence/
     ├── README.md
     ├── tests-or-evals/
@@ -24,8 +25,8 @@ Use only the subfolders that matter to the decision.
 
 ## Workflow
 
-1. Copy `decision.md` and `claim.json` into a private project folder.
-2. Keep one row per open decision on a copy of [`../templates/decision-register.md`](../templates/decision-register.md). Status is only `PASS`, `BLOCKED`, or `INSUFFICIENT EVIDENCE`. Do not average the rows.
+1. Copy `decision.md`, `claim.json` and `decision-register.md` into a private project folder.
+2. Keep one row per open decision in your copy of `decision-register.md`. Status is only `PASS`, `BLOCKED`, or `INSUFFICIENT EVIDENCE`. Do not average the rows.
 3. Name the **decision sought** before collecting more evidence.
 4. Put supporting internal material under `evidence/` or link to the organisation's existing controlled systems.
 5. Evaluate `claim.json` with the interactive Claim Gate, CLI, WebMCP, or native MCP.

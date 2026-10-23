@@ -2,13 +2,17 @@ from __future__ import annotations
 
 import json
 import sys
+import tempfile
 import unittest
+import zipfile
 from pathlib import Path
+from unittest import mock
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from claim_gate import evaluate  # noqa: E402
+import publish_toolkit_assets  # noqa: E402
 
 
 class ToolkitSampleTests(unittest.TestCase):
@@ -139,6 +143,15 @@ class ToolkitSampleTests(unittest.TestCase):
         workbook = REPO_ROOT / "toolkit" / "private-workbook"
         for relative in ("README.md", "decision.md", "claim.json", "evidence/README.md"):
             self.assertTrue((workbook / relative).is_file(), relative)
+
+    def test_published_workbook_carries_the_decision_register(self):
+        # The workbook is downloaded on its own, so the register must travel inside it.
+        with tempfile.TemporaryDirectory() as site, mock.patch.object(publish_toolkit_assets, "SITE", Path(site)):
+            publish_toolkit_assets.main()
+            downloads = Path(site) / "downloads"
+            self.assertTrue((downloads / "private-workbook" / "decision-register.md").is_file())
+            with zipfile.ZipFile(downloads / "ai-output-to-value-private-workbook.zip") as archive:
+                self.assertIn("decision-register.md", archive.namelist())
 
 
 class SampleCountDocumentationTests(unittest.TestCase):
