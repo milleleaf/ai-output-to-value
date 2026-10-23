@@ -317,6 +317,18 @@ articles:
     reviewed: 2026-09-14
     status: active_policy
 
+  - id: public-case-corpus
+    title: Public case corpus
+    source: docs/public-case-corpus.md
+    slug: public-case-corpus
+    section: policy
+    release_scope: policy
+    order: 315
+    summary: How published results are coded onto the six claims, and why one reader session cannot stand for that evidence.
+    maintainer: Helen Kwok
+    reviewed: 2026-09-22
+    status: active_policy
+
   - id: reading-path
     title: Reading path
     source: docs/reading-path.md

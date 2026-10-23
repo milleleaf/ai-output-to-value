@@ -57,11 +57,12 @@ class MeetingQuestionTests(unittest.TestCase):
             with self.subTest(detail=detail):
                 self.assertIn(detail, brief)
 
-    def test_reader_test_records_hesitation_on_the_two_long_questions(self):
+    def test_reader_session_is_withdrawn_in_favour_of_the_public_corpus(self):
         protocol = read("docs/human-kit-reader-test.md")
-        for needle in ("**Question 4:**", "**Question 6:**", "What would change the wording of Questions 4 and 6"):
-            with self.subTest(needle=needle):
-                self.assertIn(needle, protocol)
+        self.assertIn("one observation", protocol)
+        self.assertIn("sampling frame", protocol)
+        self.assertIn("public-case-corpus.md", protocol)
+        self.assertNotIn("release criterion is complete only after", protocol)
 
 
 if __name__ == "__main__":

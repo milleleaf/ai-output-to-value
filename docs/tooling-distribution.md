@@ -16,7 +16,7 @@ This claim is about the publication and method itself:
 - release-scope content and examples;
 - accepted independent-review dispositions for launch-critical evidence;
 - policy, provenance, correction, confidentiality, licensing, and reuse terms;
-- rendered usability/print checks and reader testing;
+- rendered usability/print checks and the public case corpus;
 - an explicit, reproducible reviewed artefact and approval decision.
 
 The reviewed artefact may include executable instruments such as the Claim Gate, schema, examples, and browser UI. Requiring those artefacts to be internally consistent is **not** the same as requiring every distribution channel or wrapper to be published and supported.

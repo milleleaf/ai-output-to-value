@@ -51,11 +51,11 @@ class DecisionScopedClaimsTests(unittest.TestCase):
         self.assertIn("Do not assign six statuses to one project", fallback)
         self.assertIn("same project can PASS an exploration decision", fallback)
 
-    def test_release_reader_test_detects_maturity_ladder_reuse(self):
+    def test_release_support_is_the_public_case_corpus(self):
         release = read("docs/first-reviewed-release.md")
-        self.assertIn("deliberately misleading summary", release)
-        self.assertIn("What is wrong with this assessment", release)
-        self.assertIn("decision + intended use + subject/scope + required claim/evidence", release)
+        self.assertIn("data/public-case-corpus.yml", release)
+        self.assertIn("A row is a published result.", release)
+        self.assertNotIn("non-technical sponsor", release)
 
 
 if __name__ == "__main__":

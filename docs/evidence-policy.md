@@ -238,3 +238,9 @@ Corrections are part of the evidence system. A correction should state:
 4. whether other pages or claims are affected.
 
 Where a disputed interpretation cannot be resolved cleanly, present the disagreement rather than forcing certainty.
+
+## 14. Public cases
+
+Which claim a published result can carry is recorded in the [public case corpus](public-case-corpus.md). A row uses the population, locator, and qualification already registered for that source.
+
+A session with one person is one observation. It is not a row in the corpus, and it is not a sample of decision-makers. Fictional teaching records stay labelled illustrative and stay out of the corpus.

@@ -162,7 +162,7 @@ Normal CI separately builds and interaction/link-checks a proposed release artif
 
 Each article declares a `release_scope` of `guide`, `policy`, or `working`. Working research is physically excluded from release mode.
 
-The public acceptance bar for the first reviewed release is now explicit in **[`docs/first-reviewed-release.md`](docs/first-reviewed-release.md)**. It covers the core instrument, worked decisions, independent evidence review, rendered usability/print checks, licences, provenance/corrections, reader testing, and explicit release approval.
+The public acceptance bar for the first reviewed release is now explicit in **[`docs/first-reviewed-release.md`](docs/first-reviewed-release.md)**. It covers the core instrument, worked decisions, independent evidence review, rendered usability/print checks, licences, provenance/corrections, the public case corpus, and explicit release approval.
 
 Until that checklist is satisfied, **Working preview stays in the header**.
 

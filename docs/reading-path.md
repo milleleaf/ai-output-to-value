@@ -63,9 +63,10 @@ For contributors, reviewers, researchers, and readers who want to inspect who st
 
 1. [`content/provenance.md`](../content/provenance.md) — maintainer, organisational home, confidentiality boundary, evidence character and actor-neutral review principle.
 2. [`docs/evidence-policy.md`](evidence-policy.md) — evidence classes, canonical registry rules, review status, preview/release gates, and corrections.
-3. [`data/claims.yml`](../data/claims.yml) — the base claim registry; additional canonical topic-specific claim registries live beside it under `data/claims*.yml`.
-4. [`data/sources.yml`](../data/sources.yml) — the base source registry; additional canonical topic-specific source registries live beside it under `data/sources*.yml` and other `data/*.yml` files containing a top-level `sources:` list.
-5. [`content/corrections.md`](../content/corrections.md) — correction and independent-review route.
+3. [`docs/public-case-corpus.md`](public-case-corpus.md) — published results coded onto the claim each source can support. A reader session remains one observation, recorded outside this corpus.
+4. [`data/claims.yml`](../data/claims.yml) — the base claim registry; additional canonical topic-specific claim registries live beside it under `data/claims*.yml`.
+5. [`data/sources.yml`](../data/sources.yml) — the base source registry; additional canonical topic-specific source registries live beside it under `data/sources*.yml` and other `data/*.yml` files containing a top-level `sources:` list.
+6. [`content/corrections.md`](../content/corrections.md) — correction and independent-review route.
 
 The publication build combines those canonical registries into one reader-facing evidence page with stable claim links and article backlinks.
 

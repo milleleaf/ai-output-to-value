@@ -12,6 +12,8 @@ claims:
     published_in:
       - file: content/worked-cases.md
         locator: "## Case 4 — a 90-day software pilot can improve speed and still worsen the system"
+      - file: docs/public-case-corpus.md
+        locator: "## What the first rows cover"
     reviewer: AI-assisted initial source check against DORA's current metric guide
     reviewed: 2026-09-15
     independent_review_status: pending

@@ -1,0 +1,132 @@
+# Public case corpus.
+#
+# One row is one published result already registered as a claim and a source.
+# The finding, locator, qualification, and source version are copied from that
+# claim's evidence entry. This file is not a second registry: it has no
+# top-level `claims:` or `sources:` list, and the publication loader ignores it.
+#
+# A row records the population the source names, the decision that source is
+# reporting, the claim that wording can assert, and the claim the registered
+# evidence can support. It is not a reader, a sample of decision-makers, or a
+# Claim Gate PASS for the organisation behind the source.
+
+public_cases:
+  - id: metr-early-2025-task-time
+    claim_id: metr-experienced-devs-slower-with-early-2025-ai
+    source_id: metr-early-2025-experienced-os-developers
+    source_version: reviewed 2026-09-16
+    locator: Core Result and Abstract
+    population: Randomized controlled trial in which 16 experienced open-source developers completed 246 real tasks in mature repositories on which they had substantial prior experience, with early-2025 AI tools allowed or disallowed by task.
+    decision_reported: Did completion time change on the assigned repository tasks when AI tools were allowed?
+    asserted_claim: 05-outcome
+    supported_claim: 05-outcome
+    does_not_support:
+      - 04-capability
+      - 06-value
+    measure: completion time
+    comparison: AI tools allowed or disallowed by task
+    cost_boundary: not recorded in the registered source or claim text
+    relevant_finding: The study reports a 19% increase in completion time with AI allowed; developers forecast a 24% speedup before tasks and estimated a 20% speedup after the study.
+    qualification: This is a narrow study of 16 experienced open-source developers completing 246 tasks in mature repositories using early-2025 tooling; it should not be generalized to all developers or current/future AI systems.
+    evidence_character: public_measured
+    status: qualified
+
+  - id: copilot-http-server-task-time
+    claim_id: github-copilot-http-server-faster-controlled-experiment
+    source_id: microsoft-github-copilot-controlled-experiment
+    source_version: reviewed 2026-09-16
+    locator: Microsoft Research abstract
+    population: Controlled experiment in which recruited software developers implemented an HTTP server in JavaScript, comparing a GitHub Copilot treatment group with a control group.
+    decision_reported: Did the Copilot group finish the JavaScript HTTP-server task faster than the control group?
+    asserted_claim: 05-outcome
+    supported_claim: 05-outcome
+    does_not_support:
+      - 04-capability
+      - 06-value
+    measure: specified task
+    comparison: control group
+    cost_boundary: not recorded in the registered source or claim text
+    relevant_finding: The Copilot treatment group completed the specified task 55.8% faster than the control group.
+    qualification: The result is task-specific and does not establish the same effect for mature repositories, review, integration, deployment, maintenance, incidents, or business value.
+    evidence_character: public_measured
+    status: qualified
+
+  - id: noy-zhang-writing-time-and-quality
+    claim_id: noy-zhang-writing-time-quality-rct
+    source_id: noy-zhang-writing-rct-science-2023
+    source_version: reviewed 2026-09-16
+    locator: Abstract
+    population: Preregistered online experiment assigning occupation-specific, incentivized midlevel professional writing tasks to 453 college-educated professionals, with half randomly exposed to ChatGPT.
+    decision_reported: Did ChatGPT access change time and quality on the selected professional writing tasks?
+    asserted_claim: 05-outcome
+    supported_claim: 05-outcome
+    does_not_support:
+      - 04-capability
+      - 06-value
+    measure: average time taken
+    comparison: half randomly exposed to ChatGPT
+    cost_boundary: not recorded in the registered source or claim text
+    relevant_finding: The published abstract reports average time taken decreased by 40% and output quality rose by 18% for the selected writing tasks.
+    qualification: The result concerns the selected professional writing tasks and participant population, not all knowledge work or end-to-end business workflows.
+    evidence_character: public_measured
+    status: qualified
+
+  - id: dellacqua-consulting-task-heterogeneity
+    claim_id: dellacqua-jagged-frontier-effects-reverse-by-task
+    source_id: dellacqua-jagged-frontier-consultants
+    source_version: revised 2026-03-17; reviewed 2026-09-16
+    locator: Abstract
+    population: Preregistered experiment with 758 BCG knowledge workers randomly assigned to no-AI, GPT-4, or GPT-4 plus prompt-overview conditions across realistic consulting tasks.
+    decision_reported: Did AI assistance change speed, quantity, quality, or correctness on the selected consulting tasks?
+    asserted_claim: 05-outcome
+    supported_claim: 05-outcome
+    does_not_support:
+      - 04-capability
+      - 06-value
+    measure: 12.2% more tasks
+    comparison: no-AI
+    cost_boundary: not recorded in the registered source or claim text
+    relevant_finding: On 18 tasks inside the selected frontier, AI users completed 12.2% more tasks and were 25.1% faster on average with improved quality; on a selected task outside the frontier, AI users were 19% less likely to produce correct solutions.
+    qualification: The experiment concerns selected management-consulting tasks and GPT-4-era tooling; it supports task heterogeneity, not a universal effect size for AI-assisted work.
+    evidence_character: public_measured
+    status: qualified
+
+  - id: brynjolfsson-customer-support-issues-per-hour
+    claim_id: nber-generative-ai-customer-support-2023
+    source_id: brynjolfsson-li-raymond-generative-ai-at-work
+    source_version: NBER Working Paper 31161, revision dated November 2023
+    locator: Abstract.
+    population: Study of a generative-AI assistant used by customer-support agents.
+    decision_reported: Did access to the assistant change issues resolved per hour for the studied customer-support agents?
+    asserted_claim: 05-outcome
+    supported_claim: 05-outcome
+    does_not_support:
+      - 04-capability
+      - 06-value
+    measure: issues resolved per hour
+    comparison: not recorded in the registered source or claim text
+    cost_boundary: not recorded in the registered source or claim text
+    relevant_finding: The abstract reports a 14% average increase in issues resolved per hour and heterogeneous effects across workers.
+    qualification: This is a specific customer-support intervention, not a universal productivity multiplier for software development, consulting, management, or knowledge work generally.
+    evidence_character: public_measured
+    status: qualified
+
+  - id: dora-five-delivery-metric-definitions
+    claim_id: dora-five-software-delivery-metrics-2026
+    source_id: dora-software-delivery-performance-metrics
+    source_version: reviewed 2026-09-15
+    locator: 'Sections "Throughput" and "Instability"'
+    population: DORA's current guide to measuring software delivery performance using change lead time, deployment frequency, failed deployment recovery time, change fail rate, and deployment rework rate.
+    decision_reported: Which measures does this guide define for software delivery performance?
+    asserted_claim: definition-only
+    supported_claim: definition-only
+    does_not_support:
+      - 05-outcome
+      - 06-value
+    measure: change lead time
+    comparison: not recorded in the registered source or claim text
+    cost_boundary: not recorded in the registered source or claim text
+    relevant_finding: DORA groups change lead time, deployment frequency, and failed deployment recovery time under throughput, and change fail rate and deployment rework rate under instability.
+    qualification: These metrics describe software delivery performance for an application or service; they are not a complete measure of customer value, AI ROI, or business profitability.
+    evidence_character: public_documented
+    status: qualified

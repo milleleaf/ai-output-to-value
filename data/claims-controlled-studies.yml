@@ -12,6 +12,8 @@ claims:
     published_in:
       - file: START-HERE.md
         locator: "## Measured evidence can point in different directions"
+      - file: docs/public-case-corpus.md
+        locator: "## What the first rows cover"
     reviewer: AI-assisted initial source check against METR's study page
     reviewed: 2026-09-16
     independent_review_status: pending
@@ -29,6 +31,8 @@ claims:
     published_in:
       - file: START-HERE.md
         locator: "## Measured evidence can point in different directions"
+      - file: docs/public-case-corpus.md
+        locator: "## What the first rows cover"
     reviewer: AI-assisted initial source check against Microsoft Research
     reviewed: 2026-09-16
     independent_review_status: pending
@@ -46,6 +50,8 @@ claims:
     published_in:
       - file: START-HERE.md
         locator: "## Measured evidence can point in different directions"
+      - file: docs/public-case-corpus.md
+        locator: "## What the first rows cover"
     reviewer: AI-assisted initial source check against the Science article
     reviewed: 2026-09-16
     independent_review_status: pending
@@ -63,6 +69,8 @@ claims:
     published_in:
       - file: START-HERE.md
         locator: "## Measured evidence can point in different directions"
+      - file: docs/public-case-corpus.md
+        locator: "## What the first rows cover"
     reviewer: AI-assisted initial source check against the revised SSRN record
     reviewed: 2026-09-16
     independent_review_status: pending

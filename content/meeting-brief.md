@@ -1,6 +1,6 @@
 # One-page meeting brief
 
-Use this when reviewing an AI-enabled proposal, prototype, deliverable, service, or decision process. A non-technical sponsor can run this discussion without software, schema documentation, MCP/WebMCP, or JSON.
+Use this when reviewing an AI-enabled proposal, prototype, deliverable, service, or decision process. A reader can run this discussion without software, schema documentation, MCP/WebMCP, or JSON.
 
 ## Start with the decision, not the taxonomy
 

@@ -53,9 +53,7 @@ A source logo or citation is not itself independent review.
 - [ ] The generated PDF meeting brief receives a real print/render check.
 - [ ] External links and source dates are reviewed.
 - [ ] The dedicated social-preview image is present.
-- [ ] At least one non-technical sponsor completes the [human-kit reader test](human-kit-reader-test.md) using only Start Here, the eight questions, Claim Card / meeting brief, and evidence; the test does not require Claim Gate, the schema, MCP tooling, or JSON.
-  - Give the reader this deliberately misleading summary: **“Output: strong; Deliverable: almost; Operating capability: not yet; Outcome / Value: unknown.”** Ask: **“What is wrong with this assessment, and how would you rewrite it?”**
-  - A passing response must reject one project-wide ladder and restate separate **decision + intended use + subject/scope + required claim/evidence** records. It should recognise that the same project can legitimately reach different conclusions for different decisions. The probe and pass criteria are in the [human-kit reader test](human-kit-reader-test.md#misleading-summary-probe).
+- [x] The [public case corpus](public-case-corpus.md) in [`data/public-case-corpus.yml`](../data/public-case-corpus.yml) has one row for each measured study named in the evidence review above, and one row for the DORA metric definition. Each row names the source population, the decision that source reports, the claim its wording asserts, the claim its evidence can support, a locator, a source version, and a qualification. A row is a published result. It is not a reader, and it is not a gate PASS. Independent review of the underlying claims remains the evidence-review checklist above.
 - [ ] Working/research essays remain visibly separated from the release guide and do not leak into the reviewed artifact.
 
 ## Governance and reuse

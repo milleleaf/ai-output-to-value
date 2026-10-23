@@ -72,6 +72,8 @@ claims:
         locator: "## 2. AI can participate in persuasion and customer interaction"
       - file: content/executive-guide.md
         locator: "## 5. AI can do business work too"
+      - file: docs/public-case-corpus.md
+        locator: "## What the first rows cover"
     reviewer: AI-assisted initial source check
     reviewed: 2026-09-14
     independent_review_status: pending
