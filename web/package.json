@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "vite build && node scripts/check-browser-bundle.mjs && node scripts/check-gate-conformance.mjs && node scripts/check-webmcp-conformance.mjs && tsx scripts/check-ui-verdict.ts",
+    "build": "vite build && node scripts/check-browser-bundle.mjs && node scripts/check-gate-conformance.mjs && node scripts/check-webmcp-conformance.mjs && tsx scripts/check-ui-verdict.ts && tsx scripts/check-claim-record.ts",
     "typecheck": "tsc --noEmit",
     "pdfcn:sync": "shadcn add @pdfcn/takumi/text @pdfcn/takumi/section @pdfcn/takumi/stack @pdfcn/takumi/badge @pdfcn/takumi/divider @pdfcn/theme-professional --yes --overwrite",
     "pdf:meeting-brief": "tsx scripts/render-meeting-brief.tsx",

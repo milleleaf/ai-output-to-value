@@ -94,6 +94,10 @@ jobs:
       - name: Build static publication preview with UI and PDF
         run: python scripts/build_with_ui.py
 
+      - name: Round-trip claim records through the built Claim Gate in headless Chrome
+        working-directory: web
+        run: node scripts/check-claim-roundtrip-browser.mjs
+
       - name: Validate repository evidence structure and internal links
         run: python scripts/check_publication.py
 
