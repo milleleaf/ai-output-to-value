@@ -1,6 +1,6 @@
 name: AI Output to Value claim gate
 description: Evaluate a machine-readable claim record using the actor-neutral stop-rule decision gate.
-author: AlreadyOpen
+author: Milleleaf
 
 branding:
   icon: check-square

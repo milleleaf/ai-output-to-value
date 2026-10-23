@@ -124,7 +124,7 @@ These fixtures are a lightweight contract test for the packaged instructions. Th
 
 The skill defers to the same public machine-readable contract as the rest of the project:
 
-- https://alreadyopen.github.io/ai-output-to-value/schemas/v1/claim.schema.json
-- https://alreadyopen.github.io/ai-output-to-value/schemas/v1/decision-gates.json
+- https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json
+- https://milleleaf.github.io/ai-output-to-value/schemas/v1/decision-gates.json
 
 A Claim Gate result evaluates the supplied record. It does not certify truth or replace an organisation's actual authority/sign-off process.

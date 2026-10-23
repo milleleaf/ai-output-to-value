@@ -53,12 +53,12 @@ def main() -> None:
 
     text = text.replace(
         '<h3>WebMCP structured tools</h3>\n            <p>WebMCP lets a page expose structured application actions through <code>document.modelContext</code> so compatible agents can discover and invoke them instead of guessing every action from the visual UI.</p>',
-        '<h3>Native MCP for IDE and terminal agents</h3>\n            <p>The local <code>@alreadyopen/mcp-output-to-value</code> server exposes the same gate, evidence search, failure-mode search, and software Outcome template over stdio for MCP-capable IDE and terminal workflows.</p>',
+        '<h3>Native MCP for IDE and terminal agents</h3>\n            <p>The local <code>@milleleaf/mcp-output-to-value</code> server exposes the same gate, evidence search, failure-mode search, and software Outcome template over stdio for MCP-capable IDE and terminal workflows.</p>',
     )
 
     text = text.replace(
         '<strong>WebMCP changes the channel, not the claim.</strong>\n          <p>Structured agent access is useful Access/Output capability. It does not by itself establish Deliverable, organisational Capability, Outcome or Value.</p>\n          <p><a href="https://webmcp.devpost.com/resources">WebMCP resources</a> · <a href="articles/claim-card.html#same-standard-does-not-mean-the-same-interface">Apply the same-standard test in the claim card</a></p>',
-        '<strong>Structured agent access changes the channel, not the claim.</strong>\n          <p><strong>Native MCP</strong> is the practical IDE/terminal path. <strong>WebMCP</strong> remains progressive enhancement when a browser exposes <code>document.modelContext</code>. Neither channel by itself establishes Deliverable, Operating capability, Outcome or Value.</p>\n          <p><a href="https://github.com/AlreadyOpen/ai-output-to-value/tree/main/packages/mcp">Native MCP setup</a> · <a href="https://webmcp.devpost.com/resources">WebMCP resources</a> · <a href="articles/claim-card.html#same-standard-does-not-mean-the-same-interface">Apply the same-standard test</a></p>',
+        '<strong>Structured agent access changes the channel, not the claim.</strong>\n          <p><strong>Native MCP</strong> is the practical IDE/terminal path. <strong>WebMCP</strong> remains progressive enhancement when a browser exposes <code>document.modelContext</code>. Neither channel by itself establishes Deliverable, Operating capability, Outcome or Value.</p>\n          <p><a href="https://github.com/milleleaf/ai-output-to-value/tree/main/packages/mcp">Native MCP setup</a> · <a href="https://webmcp.devpost.com/resources">WebMCP resources</a> · <a href="articles/claim-card.html#same-standard-does-not-mean-the-same-interface">Apply the same-standard test</a></p>',
     )
 
     text = text.replace(

@@ -1,4 +1,4 @@
-# @alreadyopen/mcp-output-to-value
+# @milleleaf/mcp-output-to-value
 
 Native Model Context Protocol access to the **AI Output to Value** decision framework.
 
@@ -35,7 +35,7 @@ This means pinning an MCP checkout to a commit also pins its gate semantics. Eac
 
 Other read-only publication tools use the public publication API at:
 
-`https://alreadyopen.github.io/ai-output-to-value/`
+`https://milleleaf.github.io/ai-output-to-value/`
 
 Override that publication host with:
 

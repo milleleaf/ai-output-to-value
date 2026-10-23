@@ -12,7 +12,7 @@ body:
     attributes:
       label: Location
       description: Page URL, article, claim ID, source ID, file path, or tool surface.
-      placeholder: https://alreadyopen.github.io/ai-output-to-value/... or claim-id
+      placeholder: https://milleleaf.github.io/ai-output-to-value/... or claim-id
     validations:
       required: true
   - type: textarea

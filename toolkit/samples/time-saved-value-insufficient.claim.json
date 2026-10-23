@@ -1,5 +1,5 @@
 {
-  "$schema": "https://alreadyopen.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
+  "$schema": "https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json",
   "schemaVersion": "1.0",
   "project": "Illustrative four-hours-saved-per-person observation",
   "targetDecision": "scale-renew-stop",

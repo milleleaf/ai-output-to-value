@@ -1,6 +1,6 @@
 # Who stands behind this guide?
 
-**AI Output to Value** is an open publication within **AlreadyOpen**.
+**AI Output to Value** is an open publication within **Milleleaf**.
 
 The initial maintainer is **Helen Kwok**. The project is intended to help technical and nontechnical decision-makers make more precise claims about AI-assisted work, delivery capability, outcomes, and business value.
 
@@ -62,8 +62,8 @@ See [Corrections and independent review](corrections.md) and the [Evidence polic
 
 ## Organisational home
 
-- **AlreadyOpen:** https://github.com/AlreadyOpen
-- **Repository:** https://github.com/AlreadyOpen/ai-output-to-value
-- **Public working preview:** https://alreadyopen.github.io/ai-output-to-value/
+- **Milleleaf:** https://github.com/milleleaf
+- **Repository:** https://github.com/milleleaf/ai-output-to-value
+- **Public working preview:** https://milleleaf.github.io/ai-output-to-value/
 
 The project should earn trust through inspectable claims, visible limitations, correction mechanisms, and useful decisions—not through an inflated institutional identity or the maintainer's biography.

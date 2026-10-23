@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 SITE_URL = os.environ.get(
     "PUBLICATION_SITE_URL",
-    "https://alreadyopen.github.io/ai-output-to-value/",
+    "https://milleleaf.github.io/ai-output-to-value/",
 ).rstrip("/") + "/"
 
 PROVIDER_RE = re.compile(

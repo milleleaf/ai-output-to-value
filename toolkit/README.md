@@ -6,8 +6,8 @@ This directory packages the decision framework into lightweight operational arte
 
 Copy [`claim.example.json`](claim.example.json) and validate it against:
 
-- `https://alreadyopen.github.io/ai-output-to-value/schemas/v1/claim.schema.json`
-- `https://alreadyopen.github.io/ai-output-to-value/schemas/v1/decision-gates.json`
+- `https://milleleaf.github.io/ai-output-to-value/schemas/v1/claim.schema.json`
+- `https://milleleaf.github.io/ai-output-to-value/schemas/v1/decision-gates.json`
 
 Local deterministic evaluation:
 
@@ -37,7 +37,7 @@ The live Claim Gate can load these samples directly.
 
 Open:
 
-`https://alreadyopen.github.io/ai-output-to-value/tools/claim-gate.html`
+`https://milleleaf.github.io/ai-output-to-value/tools/claim-gate.html`
 
 Human, AI and hybrid workflows operate on the same `claim.json` contract:
 
@@ -104,7 +104,7 @@ After checking out the caller repository:
 
 ```yaml
 - name: AI Output to Value decision gate
-  uses: AlreadyOpen/ai-output-to-value@main
+  uses: milleleaf/ai-output-to-value@main
   with:
     claim: governance/claim.json
 ```
@@ -120,7 +120,7 @@ The Action exposes the gate result as step outputs, so a caller can branch on th
 ```yaml
 - name: AI Output to Value decision gate
   id: gate
-  uses: AlreadyOpen/ai-output-to-value@main
+  uses: milleleaf/ai-output-to-value@main
   with:
     claim: governance/claim.json
     fail-on-block: 'false'
